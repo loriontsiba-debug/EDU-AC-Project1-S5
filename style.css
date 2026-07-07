@@ -1,7 +1,9 @@
 /* 
    Edu-AC - style commun
-   Fichier partage : prevenir le groupe avant modif
- */
+   Fichier partage : ne contient que les elements utilises
+   sur TOUTES les pages (header, nav, footer, boutons communs).
+   Ne pas ajouter ici le style d'une section specifique a une page.
+    */
 
 * {
   margin: 0;
@@ -58,18 +60,7 @@ nav {
   color: #fff;
 }
 
-.btn-don {
-  background-color: #f0a500;
-  color: #1b3a57;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-/*  HERO / CHIFFRES CLES (Accueil)  */
-
-.hero {
-}
+/*  BOUTONS COMMUNS (utilises sur plusieurs pages)  */
 
 .btn-primary {
   display: inline-block;
@@ -79,49 +70,12 @@ nav {
   border-radius: 4px;
 }
 
-.chiffres {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 30px 20px;
-}
-
-/*  NOS ACTIONS (Grid)  */
-
-.actions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 20px;
-}
-
-/*  EVENEMENTS*/
-
-.events-list {
-}
-
-.event {
-  border-top: 1px solid #ddd;
-  padding: 15px 0;
-}
-
-/*  CONTACT / DON  */
-
-.contact-form {
-}
-
-.don-box {
-  background-color: #1b3a57;
-  color: #fff;
-  padding: 25px;
-  border-radius: 6px;
+.btn-don {
+  background-color: #f0a500;
+  color: #1b3a57;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 /*  FOOTER  */
@@ -134,24 +88,29 @@ footer {
   font-size: 0.85rem;
 }
 
-/*  RESPONSIVE - 3 breakpoints
-   mobile ~375px / tablette ~768px / desktop ~1280px */
+/*  RESPONSIVE - nav (commun)  */
 
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 12px;
   }
-
-  .actions-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
-@media (max-width: 375px) {
-  .btn-primary,
-  .btn-don {
-    width: 100%;
-    text-align: center;
-  }
-}
+/* 
+   A PARTIR D'ICI : chacun ajoute
+   le style de SA page dans SA propre section,
+   sans toucher a ce qu'il y a au-dessus.
+   */
+
+/*  Dev Accueil : .hero, .chiffres */
+
+
+/*  Dev Nos actions : .actions-grid, .card  */
+
+
+/*  Dev Evenements : .events-list, .event */
+
+
+/*  Repo Admin (Contact) : .contact-form, .don-box  */
+
