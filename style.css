@@ -1,0 +1,116 @@
+/* 
+   Edu-AC - style commun
+   Fichier partage : ne contient que les elements utilises
+   sur TOUTES les pages (header, nav, footer, boutons communs).
+   Ne pas ajouter ici le style d'une section specifique a une page.
+    */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #fafafa;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*  HEADER + NAV (Flexbox)  */
+
+header {
+  background-color: #1b3a57;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/*  BOUTONS COMMUNS (utilises sur plusieurs pages)  */
+
+.btn-primary {
+  display: inline-block;
+  background-color: #1b3a57;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 4px;
+}
+
+.btn-don {
+  background-color: #f0a500;
+  color: #1b3a57;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/*  FOOTER  */
+
+footer {
+  background-color: #1b3a57;
+  color: #ddd;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.85rem;
+}
+
+/*  RESPONSIVE - nav (commun)  */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* 
+   A PARTIR D'ICI : chacun ajoute
+   le style de SA page dans SA propre section,
+   sans toucher a ce qu'il y a au-dessus.
+   */
+
+/*  Dev Accueil : .hero, .chiffres */
+
+
+/*  Dev Nos actions : .actions-grid, .card  */
+
+
+/*  Dev Evenements : .events-list, .event */
+
+
+/*  Repo Admin (Contact) : .contact-form, .don-box  */
+
