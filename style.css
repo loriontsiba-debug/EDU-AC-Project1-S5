@@ -1,0 +1,157 @@
+/* 
+   Edu-AC - style commun
+   Fichier partage : prevenir le groupe avant modif
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #fafafa;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*  HEADER + NAV (Flexbox)  */
+
+header {
+  background-color: #1b3a57;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+.btn-don {
+  background-color: #f0a500;
+  color: #1b3a57;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/*  HERO / CHIFFRES CLES (Accueil)  */
+
+.hero {
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #1b3a57;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 4px;
+}
+
+.chiffres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 30px 20px;
+}
+
+/*  NOS ACTIONS (Grid)  */
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+/*  EVENEMENTS*/
+
+.events-list {
+}
+
+.event {
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+/*  CONTACT / DON  */
+
+.contact-form {
+}
+
+.don-box {
+  background-color: #1b3a57;
+  color: #fff;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+/*  FOOTER  */
+
+footer {
+  background-color: #1b3a57;
+  color: #ddd;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.85rem;
+}
+
+/*  RESPONSIVE - 3 breakpoints
+   mobile ~375px / tablette ~768px / desktop ~1280px */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .btn-primary,
+  .btn-don {
+    width: 100%;
+    text-align: center;
+  }
+}
