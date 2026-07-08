@@ -23,11 +23,6 @@ a {
   color: inherit;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /*  HEADER + NAV (Flexbox)  */
 
@@ -106,7 +101,87 @@ footer {
 /*  Dev Accueil : .hero, .chiffres */
 
 
-/*  Dev Nos actions : .actions-grid, .card  */
+.section-header {
+  text-align: center;
+  margin: 20px;
+}
+
+.nos-actions {
+   padding: 20px;
+   background-color: antiquewhite;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+/* --- GRILLE POUR LES SMARTPHONES (Par défaut) --- */
+.actions-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Une seule colonne sur mobile pour que ce soit lisible */
+  gap: 20px; 
+}
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+article:hover {
+  transform: scale(1.01);
+  box-shadow: none;
+}
+article img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+}
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  line-height: 1.6;
+  flex-grow: 1; /* Permet au contenu de s'étirer pour aligner les boutons en bas */
+}
+
+.card-content p {
+  padding: 10px 0;
+  text-align: center;
+  flex-grow: 1; /* Pousse le bouton vers le bas si un texte est plus court qu'un autre */
+}
+
+
+article .btn-don {
+  background-color: #f0a500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+article .btn-don:hover {
+  transform: scale(1.05);
+}
+
+
+@media only screen and (min-width: 768px) {
+ .actions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 
 /*  Dev Evenements : .events-list, .event */
