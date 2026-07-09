@@ -83,15 +83,61 @@ footer {
   font-size: 0.85rem;
 }
 
-/*  RESPONSIVE - nav (commun)  */
+/* RESPONSIVE - 3 breakpoints obligatoires
+   mobile ~375px / tablette ~768px / desktop ~1280px
+   Ici : uniquement pour les elements communs (nav, footer, boutons).
+   Chaque dev doit AUSSI ajouter ses propres media queries
+   pour ses classes, dans sa section plus bas. */
 
+/* Tablette (~768px) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 12px;
   }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
+/* Mobile (~375px) */
+@media (max-width: 375px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-don {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 18px 15px;
+  }
+}
+
+/* Desktop large (~1280px et plus) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  nav {
+    max-width: 1200px;
+    padding: 20px 20px;
+  }
+}
 /* 
    A PARTIR D'ICI : chacun ajoute
    le style de SA page dans SA propre section,
