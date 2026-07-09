@@ -1,54 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu-AC - Accueil</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu-AC - Accueil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="assets/logo-eduac.jpeg"
+            alt="Logo Edu-AC, association éducative"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="actions.html">Nos actions</a></li>
+          <li><a href="evenements.html">Événements</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn-don" href="contact.html">Faire un don</a>
+      </nav>
+    </header>
 
-  <header>
-    <nav>
-      <div class="logo">Edu-AC</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="actions.html">Nos actions</a></li>
-        <li><a href="evenements.html">Événements</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a class="btn-don" href="contact.html">Faire un don</a>
-    </nav>
-  </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-tag">Association éducative</span>
+          <h1>
+            Chaque enfant mérite une salle de classe qui lui donne envie
+            d'apprendre.
+          </h1>
+          <p>
+            Edu-AC construit et équipe des espaces d'apprentissage dans les
+            zones sous-desservies, et forme les enseignants aux outils
+            numériques.
+          </p>
 
-  <main>
-    <section class="hero">
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn-primary">Faire un don</a>
+            <a href="actions.html" class="btn-secondary"
+              >Découvrir nos actions</a
+            >
+          </div>
+        </div>
 
-      <!--
-        A REMPLIR PAR LE DEV "ACCUEIL" (Ngassai Ndongo Dubien) 
-        Consigne : un titre (h1), un court paragraphe de presentation
-        de l'association, et un bouton vers contact.html (class="btn-primary").
-        Vue que tu as deux parties dubien tu peux donner une AKIANA Arsène si ça ne te dérange pas
-      -->
+        <div class="hero-media">
+          <img
+            src="assets/classstudents.avif"
+            alt="Élèves dans une salle de classe équipée par Edu-AC"
+            loading="lazy"
+          />
+          <!-- loading="lazy" : le navigateur ne charge
+        l'image que quand elle approche de la zone visible à l'écran.-->
+        </div>
+      </section>
 
-    </section>
+      <section class="chiffres">
+        
+        <div class="chiffre-item">
+          <span class="chiffre-nombre">12</span>
+          <span class="chiffre-label">écoles équipées</span>
+        </div>
 
-    <section class="chiffres">
+        <div class="chiffre-item">
+          <span class="chiffre-nombre">3200</span>
+          <span class="chiffre-label">élèves accompagnés</span>
+        </div>
 
-      <!--
-        A REMPLIR PAR LE DEV "ACCUEIL" (Ngassai Ndongo Dubien)
-        Consigne : 4 blocs "chiffres cles" (ex: nombre d'ecoles,
-        d'eleves, d'enseignants, annees d'existence).
-        Cette section est deja en Flexbox (voir style.css .chiffres).
-        Chaque bloc peut etre un simple <div> avec un chiffre et un label.
-      -->
+        <div class="chiffre-item">
+          <span class="chiffre-nombre">86</span>
+          <span class="chiffre-label">enseignants formés</span>
+        </div>
 
-    </section>
-  </main>
+        <div class="chiffre-item">
+          <span class="chiffre-nombre">9 ans</span>
+          <span class="chiffre-label">d'engagement local</span>
+        </div>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; Edu-AC - Association éducative fictive - projet Akieni Academy</p>
-  </footer>
-
-</body>
+    <footer>
+      <p>
+        &copy; Edu-AC - Association éducative fictive - projet Akieni Academy
+      </p>
+    </footer>
+  </body>
 </html>
