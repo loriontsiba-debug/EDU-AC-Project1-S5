@@ -43,6 +43,37 @@ nav {
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
+  display: flex;        /* permet de bien centrer l'image verticalement */
+  align-items: center;
+}
+
+.logo img {
+  height: 48px;        /* on fixe la hauteur du logo dans la nav */
+  width: auto;         /* la largeur s'adapte automatiquement, pas de logo déformé */
+  display: block;      /* évite un petit espace fantôme sous l'image  */
+/* 
+    Le logo a un fond blanc rectangulaire.
+    Sur un header bleu marine, ça ferait un carré blanc moche.
+    padding + background blanc + border-radius = on transforme
+    ce "défaut" en carte propre et volontaire, comme un badge.
+  */
+  padding: 6px 10px;
+  background-color: #fff;
+  border-radius: 8px;
+
+  /* petite ombre pour que le logo se détache bien du header */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+  /* transition douce pour l'effet au survol (voir ci-dessous) */
+  transition: transform 0.2s ease;
+}
+
+/* 
+  Petit effet interactif : le logo grossit légèrement au survol de la souris.
+  Optionnel,  ça donne un aspect "vivant" et professionnel au site.
+*/
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -98,9 +129,131 @@ footer {
    sans toucher a ce qu'il y a au-dessus.
    */
 
+
 /*  Dev Accueil : .hero, .chiffres */
+/* le css de la hero section les gars */
+.hero {
+  display: flex;
+  flex-direction: column;   /* MOBILE (375px) : texte puis image, empilés verticalement */
+  gap: 30px;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.hero-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #f0a500;
+  text-transform: uppercase;   /* force les majuscules, comme sur la maquette */
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
+.hero h1 {
+  font-size: 1.8rem;
+  color: #1b3a57;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;   /* boutons empilés sur mobile */
+  gap: 12px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  border: 2px solid #1b3a57;
+  color: #1b3a57;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero-media img {
+  width: 100%;         /* l'image prend toute la largeur disponible sur mobile */
+  border-radius: 8px;
+  display: block;
+}
+
+/* TABLETTE (768px) : texte et image côte à côte */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;       /* on passe en ligne au lieu de colonne */
+    text-align: left;
+    align-items: center;
+  }
+  .hero-content,
+  .hero-media {
+    flex: 1;                   /* les deux blocs partagent l'espace à 50/50 */
+  }
+  .hero-buttons {
+    flex-direction: row;       /* boutons côte à côte */
+  }
+}
+
+/* DESKTOP (1280px) : on aère un peu plus */
+@media (min-width: 1280px) {
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* la seconde partie concernant les chiffres les de l'acceuil */
+.chiffres {
+  display: flex;
+  flex-direction: column;      /* MOBILE : empilés verticalement */
+}
+
+.chiffre-item {
+  text-align: center;
+  padding: 25px 20px;
+  border-bottom: 4px solid #f0a500;
+}
+
+.chiffre-item:last-child {
+  border-bottom: none;    /* pas de ligne après le dernier bloc */
+}
+
+.chiffre-nombre {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1b3a57;
+}
+
+.chiffre-label {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* TABLETTE et DESKTOP : les 4 blocs côte à côte */
+@media (min-width: 768px) {
+  .chiffres {
+    flex-direction: row;
+  }
+  .chiffre-item {
+    flex: 1;                          /* chaque bloc prend une largeur égale */
+    border-bottom: none;
+    border-right: 4px solid #f0a500;  /* la ligne devient verticale entre les blocs */
+  }
+  .chiffre-item:last-child {
+    border-right: none;
+  }
+}
+
+/*  Dev nos actions : .nos actions */
 .section-header {
   text-align: center;
   margin: 20px;
