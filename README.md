@@ -15,7 +15,7 @@ Site vitrine associatif d'une ONG éducative fictive, réalisé dans le cadre de
 ## Liens
 
 - Dépôt GitHub : https://github.com/loriontsiba-debug/EDU-AC-Project1-S5.git
-- Site déployé (GitHub Pages) : https://loriontsiba-debug.github.io/EDU-AC-Project1-S5/contact.html
+- Site déployé (GitHub Pages) : https://loriontsiba-debug.github.io/EDU-AC-Project1-S5/
 
 ## Conflit de merge rencontré
 
