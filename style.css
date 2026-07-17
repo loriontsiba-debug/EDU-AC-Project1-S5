@@ -385,7 +385,7 @@ article .btn-don:hover {
 
 
 /*  Dev Evenements : .events-list, .event */
-events{
+.events{
     width: 90%;
     max-width: 1200px;
     margin: 70px auto;
