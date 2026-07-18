@@ -307,7 +307,7 @@ footer {
 
 .nos-actions {
    padding: 20px;
- background-color: rgb(243, 218, 243);
+  background-color: transparent;
 
 }
 
@@ -331,7 +331,7 @@ article {
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
 }
